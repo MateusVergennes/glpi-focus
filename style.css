@@ -39,7 +39,7 @@ div.floating-buttons.d-inline-flex {
     padding: 0 !important;
 }
 
-/* remove qualquer resíduo de margem/padding no contêiner principal  */
+/* remove margens/paddings extras */
 div.page-wrapper,
 div.page-wrapper.mb-0,
 div.page-body,
@@ -50,7 +50,7 @@ main {
     height: 100% !important;
 }
 
-/* ---------- a área central preenche toda a tela ---------- */
+/* área central */
 #mainContent,
 div.layout,
 main {
@@ -65,29 +65,15 @@ body,
     height: 100% !important;
 }
 
-/* ---------------------- FOCUS LATERAL DIREITA ---------------------- */
-
-/* OCULTA TUDO inicialmente */
+/* ---------------- campos ocultos inicialmente ---------------- */
 div.form-field {
     display: none !important;
 }
 
-/* MOSTRA apenas os blocos que CONTÊM labels com for= */
-div.form-field:has(label[for^="status_"]),
-div.form-field:has(label[for^="priority_"]),
-div.form-field:has(label[for^="requester_"]),
-div.form-field:has(label[for^="observer_"]),
-div.form-field:has(label[for^="assign_"]),
-div.form-field:has(label[for^="slas_id_ttr_"]) {
-    display: flex !important;
-    flex-wrap: wrap;
-}
-
-/* ---------- Itens & Chamado relacionado (ocultar) ---------- *
-   Esconde completamente os dois accordions: “Itens” e “Chamado relacionado”.
-   O seletor :has() já é suportado pelo Chrome moderno, por isso podemos
-   eliminar todo o bloco pai de uma vez para não deixar espaços vazios.
-*/
+/* accordions escondidos */
+.accordion-item:has(#item-main),
+.accordion-item:has(#actors),
+.accordion-item:has(#service-levels),
 .accordion-item:has(#items-heading),
 .accordion-item:has(#linked_tickets-heading),
 #items-heading,
@@ -95,4 +81,52 @@ div.form-field:has(label[for^="slas_id_ttr_"]) {
 #items,
 #linked_tickets {
     display: none !important;
+}
+
+/* ------------------------------------------------------------------ */
+/*                  Painel flutuante (botão direito)                  */
+/* ------------------------------------------------------------------ */
+#__glpi_focus_panel__ {
+    position: absolute;
+    z-index: 30000;
+    /* deve ficar alto, mas... */
+    background: #fff;
+    border: 1px solid #c0c0c0;
+    border-radius: 4px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, .15);
+    padding: 8px 10px;
+    font-size: .85rem;
+    line-height: 1.35em;
+    max-width: 340px;
+    max-height: 75vh;
+    overflow: visible;
+    /* permite menus saírem da caixa */
+}
+
+/* forçar exibição dentro do painel */
+#__glpi_focus_panel__ .form-field {
+    display: flex !important;
+    flex-wrap: wrap;
+    margin-bottom: 6px;
+}
+
+#__glpi_focus_panel__ .form-field label {
+    flex: 0 0 35%;
+    font-weight: 600;
+}
+
+#__glpi_focus_panel__ .form-field .field-container,
+#__glpi_focus_panel__ .select2-container {
+    flex: 1 1 auto;
+    width: auto !important;
+}
+
+/* ------------------------------------------------------------------ */
+/*          Menus flutuantes do Select2 / Flatpickr acima do painel   */
+/* ------------------------------------------------------------------ */
+.select2-container--open,
+.select2-dropdown,
+.flatpickr-calendar {
+    z-index: 40000 !important;
+    /* acima dos 30000 do painel */
 }
