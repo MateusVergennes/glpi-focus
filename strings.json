@@ -1,0 +1,16 @@
+{
+    "en": {
+        "TITLE": "GLPI Focus Mode",
+        "DESC1": "Hides GLPI sidebars, navbar and footer so you can focus on the ticket.",
+        "DESC2": "With Focus Mode on, right-click anywhere to open a compact panel of key fields.",
+        "SHORTCUT": "Shortcut",
+        "BUTTON": "Toggle Focus Mode"
+    },
+    "pt": {
+        "TITLE": "GLPI Focus Mode",
+        "DESC1": "Oculta barras laterais, navbar e rodapé do GLPI para você focar no chamado.",
+        "DESC2": "Com o Focus Mode ativo, clique com o botão direito para ver um painel compacto com os campos principais.",
+        "SHORTCUT": "Atalho",
+        "BUTTON": "Alternar Focus Mode"
+    }
+}

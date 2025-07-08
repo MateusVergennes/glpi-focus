@@ -1,4 +1,4 @@
-/* ---------- coluna/lateral esquerda ---------- */
+/* ---------- left sidebar ---------- */
 #leftnav,
 #glpi_side,
 aside,
@@ -6,13 +6,13 @@ nav[data-testid="treeview"] {
     display: none !important;
 }
 
-/* ---------- painel lateral direita ---------- */
+/* ---------- right side panel ---------- */
 #tabspanel,
 div[aria-label="Ticket side panel"] {
     display: none !important;
 }
 
-/* ---------- navbar superior ---------- */
+/* ---------- top navbar ---------- */
 #header,
 header,
 .navbar,
@@ -21,7 +21,7 @@ div.topbar,
     display: none !important;
 }
 
-/* ---------- barra de ações / rodapé ---------- */
+/* ---------- action bar / footer ---------- */
 footer,
 #footer,
 div.sticky-bottom-toolbar,
@@ -39,7 +39,7 @@ div.floating-buttons.d-inline-flex {
     padding: 0 !important;
 }
 
-/* remove margens/paddings extras */
+/* remove extra margins/paddings */
 div.page-wrapper,
 div.page-wrapper.mb-0,
 div.page-body,
@@ -50,7 +50,7 @@ main {
     height: 100% !important;
 }
 
-/* área central */
+/* central area */
 #mainContent,
 div.layout,
 main {
@@ -65,12 +65,12 @@ body,
     height: 100% !important;
 }
 
-/* ---------------- campos ocultos inicialmente ---------------- */
+/* ---------------- fields initially hidden ---------------- */
 div.form-field {
     display: none !important;
 }
 
-/* accordions escondidos */
+/* hidden accordions */
 .accordion-item:has(#item-main),
 .accordion-item:has(#actors),
 .accordion-item:has(#service-levels),
@@ -84,12 +84,11 @@ div.form-field {
 }
 
 /* ------------------------------------------------------------------ */
-/*                  Painel flutuante (botão direito)                  */
+/*                  Floating panel (right-click)                      */
 /* ------------------------------------------------------------------ */
 #__glpi_focus_panel__ {
     position: absolute;
     z-index: 30000;
-    /* deve ficar alto, mas... */
     background: #fff;
     border: 1px solid #c0c0c0;
     border-radius: 4px;
@@ -100,10 +99,9 @@ div.form-field {
     max-width: 340px;
     max-height: 75vh;
     overflow: visible;
-    /* permite menus saírem da caixa */
 }
 
-/* forçar exibição dentro do painel */
+/* force display inside the panel */
 #__glpi_focus_panel__ .form-field {
     display: flex !important;
     flex-wrap: wrap;
@@ -122,11 +120,10 @@ div.form-field {
 }
 
 /* ------------------------------------------------------------------ */
-/*          Menus flutuantes do Select2 / Flatpickr acima do painel   */
+/*          Select2 / Flatpickr dropdowns above the panel             */
 /* ------------------------------------------------------------------ */
 .select2-container--open,
 .select2-dropdown,
 .flatpickr-calendar {
     z-index: 40000 !important;
-    /* acima dos 30000 do painel */
 }

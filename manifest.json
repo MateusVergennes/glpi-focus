@@ -1,7 +1,7 @@
 {
     "name": "GLPI Focus Mode",
     "description": "Esconde menus e navbar do GLPI para ganhar espaço.",
-    "version": "1.2.0",
+    "version": "1.1.1",
     "manifest_version": 3,
     "permissions": [
         "activeTab",
@@ -19,7 +19,8 @@
         }
     },
     "action": {
-        "default_title": "GLPI Focus"
+        "default_title": "GLPI Focus",
+        "default_popup": "popup.html"
     },
     "web_accessible_resources": [
         {
