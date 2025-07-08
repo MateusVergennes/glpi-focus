@@ -1,0 +1,98 @@
+/* ---------- coluna/lateral esquerda ---------- */
+#leftnav,
+#glpi_side,
+aside,
+nav[data-testid="treeview"] {
+    display: none !important;
+}
+
+/* ---------- painel lateral direita ---------- */
+#tabspanel,
+div[aria-label="Ticket side panel"] {
+    display: none !important;
+}
+
+/* ---------- navbar superior ---------- */
+#header,
+header,
+.navbar,
+div.topbar,
+#headerbar {
+    display: none !important;
+}
+
+/* ---------- barra de ações / rodapé ---------- */
+footer,
+#footer,
+div.sticky-bottom-toolbar,
+div.sticky-bottom,
+div.sticky-form-actions,
+div.form-actions,
+div.page-footer,
+div.ticket-actions,
+div[data-testid="formActionsFooter"],
+div[data-testid="ticketFooter"],
+div.floating-buttons.d-inline-flex {
+    display: none !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* remove qualquer resíduo de margem/padding no contêiner principal  */
+div.page-wrapper,
+div.page-wrapper.mb-0,
+div.page-body,
+div.layout,
+main {
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+    height: 100% !important;
+}
+
+/* ---------- a área central preenche toda a tela ---------- */
+#mainContent,
+div.layout,
+main {
+    max-width: 100% !important;
+}
+
+html,
+body,
+.row {
+    padding: 0 !important;
+    margin: 0 !important;
+    height: 100% !important;
+}
+
+/* ---------------------- FOCUS LATERAL DIREITA ---------------------- */
+
+/* OCULTA TUDO inicialmente */
+div.form-field {
+    display: none !important;
+}
+
+/* MOSTRA apenas os blocos que CONTÊM labels com for= */
+div.form-field:has(label[for^="status_"]),
+div.form-field:has(label[for^="priority_"]),
+div.form-field:has(label[for^="requester_"]),
+div.form-field:has(label[for^="observer_"]),
+div.form-field:has(label[for^="assign_"]),
+div.form-field:has(label[for^="slas_id_ttr_"]) {
+    display: flex !important;
+    flex-wrap: wrap;
+}
+
+/* ---------- Itens & Chamado relacionado (ocultar) ---------- *
+   Esconde completamente os dois accordions: “Itens” e “Chamado relacionado”.
+   O seletor :has() já é suportado pelo Chrome moderno, por isso podemos
+   eliminar todo o bloco pai de uma vez para não deixar espaços vazios.
+*/
+.accordion-item:has(#items-heading),
+.accordion-item:has(#linked_tickets-heading),
+#items-heading,
+#linked_tickets-heading,
+#items,
+#linked_tickets {
+    display: none !important;
+}
