@@ -1,4 +1,4 @@
-# GLPI Focus Mode – Browser Extension
+# GLPI Focus Mode (English) – Browser Extension
 
 GLPI Focus Mode is a lightweight browser extension that strips away GLPI’s sidebars, top bar, and footer, letting you concentrate on the ticket content. While focus is enabled, a right-click anywhere on the page summons a compact panel with the most important ticket fields.
 
@@ -28,7 +28,7 @@ GLPI Focus Mode is a lightweight browser extension that strips away GLPI’s sid
 
 ---
 
-# Modo Foco GLPI – Extensão para Navegador
+# Modo Foco GLPI (Português) – Extensão para Navegador
 
 O Modo Foco GLPI é uma extensão leve para navegador que oculta as barras laterais, barra superior e rodapé do GLPI, permitindo que você se concentre no conteúdo do ticket. Com o modo foco ativo, um clique direito em qualquer lugar da página exibe um painel compacto com os principais campos do ticket.
 
