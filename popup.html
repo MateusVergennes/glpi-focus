@@ -4,75 +4,22 @@
 <head>
     <meta charset="utf-8" />
     <title>GLPI Focus Mode</title>
-    <style>
-        :root {
-            --bg: #f9fafb;
-            --primary: #004c9b;
-            --primary-light: #0367d3;
-        }
-
-        body {
-            margin: 0;
-            background: var(--bg);
-            width: 280px;
-            font-family: system-ui, Arial, sans-serif;
-        }
-
-        header {
-            background: var(--primary);
-            color: #fff;
-            padding: 12px 16px;
-            text-align: center;
-        }
-
-        h1 {
-            font-size: 1.05rem;
-            margin: 0;
-        }
-
-        main {
-            padding: 14px 16px;
-        }
-
-        p {
-            font-size: 0.85rem;
-            line-height: 1.35em;
-            margin: 0 0 10px;
-        }
-
-        .small {
-            font-size: 0.8rem;
-        }
-
-        button {
-            width: 100%;
-            padding: 10px 0;
-            font-size: 0.9rem;
-            font-weight: 600;
-            color: #fff;
-            background: var(--primary);
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: background .15s;
-        }
-
-        button:hover {
-            background: var(--primary-light);
-        }
-    </style>
+    
+    <link rel="stylesheet" href="popup.css" />
 </head>
 
 <body>
     <header>
         <h1 id="title"></h1>
     </header>
+
     <main>
         <p id="desc1"></p>
         <p id="desc2"></p>
         <p class="small"><strong id="shortcut-label"></strong>: Alt + Shift + Q</p>
         <button id="toggle"></button>
     </main>
+
     <script src="popup.js"></script>
 </body>
 
