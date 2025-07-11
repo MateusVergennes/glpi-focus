@@ -87,7 +87,7 @@ div.form-field {
 /*                  Floating panel (right-click)                      */
 /* ------------------------------------------------------------------ */
 #__glpi_focus_panel__ {
-    position: absolute;
+    position: fixed;
     z-index: 30000;
     background: #fff;
     border: 1px solid #c0c0c0;

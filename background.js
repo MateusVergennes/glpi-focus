@@ -22,17 +22,17 @@ function toggleFocusInPage() {
   fetch(chrome.runtime.getURL('style.css'))
     .then(r => r.text())
     .then(css => {
-      const s = document.createElement('style');
-      s.id = STYLE_ID;
-      s.textContent = css;
-      document.head.appendChild(s);
+      const style = document.createElement('style');
+      style.id = STYLE_ID;
+      style.textContent = css;
+      document.head.appendChild(style);
 
       const ctxHandler = e => {
         e.preventDefault();
         if (document.getElementById(PANEL_ID)) {
           closePanel();
         } else {
-          buildPanel(e.pageX, e.pageY);
+          buildPanel(e.clientX, e.clientY);     
         }
       };
       document.addEventListener('contextmenu', ctxHandler);
